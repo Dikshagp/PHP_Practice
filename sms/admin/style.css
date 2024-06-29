@@ -1,0 +1,30 @@
+.admintitle
+{
+    background-color: rgb(166, 144, 187);
+  line-height: 20px;
+   padding: 2px;
+}
+.dash
+{
+    background-color: rgb(236, 236, 169);
+    padding: 10px;
+}
+.adds
+{
+    
+    padding-top: 20px;
+    margin-left: 550px;
+    font-size: larger;
+   line-height: 20px;
+}
+
+.form-group
+{
+    margin-top: 20px;
+    margin-left: 30%;
+}
+#update
+{
+
+    margin-left: 30%;
+}
