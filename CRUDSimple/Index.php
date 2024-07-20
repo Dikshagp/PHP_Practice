@@ -14,14 +14,14 @@ $name = $_POST['name'];
   $result = mysqli_query($conn, $sql);
 
   if($result){  
-    echo "Data Inserted Successfully";
+    echo "<script>alert('Data Inserted Successfully !!');</script>";
     header("location: display.php");
   
 
 }
 else{
   //die(mysqli_error($conn));
-echo "Error while inserting";
+echo "<script>alert('Failed To Insert Data !!');</script>";
 }
 }
 
@@ -41,17 +41,14 @@ echo "Error while inserting";
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="style.css">
     <title>SimpleCrud</title>
   </head>
   <body>
-    <h3>Choose Language</h3>
-    <select >
-    <option value="select">Select Language</option>
-      <option value="EN">English</option>
-      <option value="JP">Japanese</option>
-    </select>
+    
   <form method="POST" action ="">
+    <h1 align="center">CRUD</h1>
+    <div class="container">
 
   <div class="form-group ">
     <label for="name">Name</label>
@@ -67,20 +64,26 @@ echo "Error while inserting";
     <label for="mobile">Mobile</label>
     <input type="text" class="form-control" id="mobile" placeholder="mobile" name = "mobile">
   </div>
-  </div>
+  
   <div class="form-group ">
     <label for="place">place</label>
     <input type="text" class="form-control" id="place" placeholder="place" name ="place">
   </div>
-  <button type="submit" id = "submit-id" >Submit</button>
+  <button type="submit" id = "submit-id" style="background-color: #17a2b8;">Submit</button>
+  <button type="submit" id = "bck" name ="back"style="background-color: #17a2b8;">Back</button>
 </form>
+</div>
+</div>
 
 
- 
+
   </body>
 </html>
-<?php
 
+<?php
+if(isset($_POST['back'])){
+  header("location:display.php");
+}
 
 
 

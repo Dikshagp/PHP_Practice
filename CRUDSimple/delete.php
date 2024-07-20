@@ -10,11 +10,11 @@ if(isset($_GET['deleteid']))
 
     if($result)
     {
-        echo"deleted successfully";
+        echo"<script>alert('Data Deleted Successfully !!');</script>";
         header("location:display.php");
     }
     else{
-        echo "Error While deleting";
+        echo "<script>alert('Failed to Delete Data !!');</script>";
     }
 }
 
